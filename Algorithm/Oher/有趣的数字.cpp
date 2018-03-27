@@ -2,21 +2,17 @@
 #include <iostream>     // std::cout
 #include <algorithm>    // std::swap
 #include <vector>       // std::vector
+#include <string>
 
+using namespace std;
 int main() {
 
-	int x = 10, y = 20;                              // x:10 y:20
-	std::swap(x, y);                              // x:20 y:10
-
-	std::vector<int> foo(4, x), bar(6, y);       // foo:4x20 bar:6x10
-	std::swap(foo, bar);                          // foo:6x10 bar:4x20
-
-	std::cout << "foo contains:";
-	for (std::vector<int>::iterator it = foo.begin(); it != foo.end(); ++it)
-		std::cout << ' ' << *it;
-	std::cout << '\n';
-
+	string s1 = "123";
+	string s2 = "123";
+	char* c1 = "123";
+	char* c2 = "123";
+	
+	cout << (&s1 == &s2) << endl << (c1 == c2) << endl;
 	getchar();
-	return 0;
 	
 }
